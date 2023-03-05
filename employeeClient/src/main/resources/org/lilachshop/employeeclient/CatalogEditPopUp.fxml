@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane onDragDetected="#uploadImg" prefHeight="503.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.lilachshop.employeeclient.CatalogEditPopUpController">
+   <children>
+      <HBox alignment="CENTER" layoutX="28.0" layoutY="89.0" prefHeight="389.0" prefWidth="746.0" spacing="30.0" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="26.0">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="391.0" prefWidth="278.0" spacing="10.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="RIGHT" text="תמונה:" textFill="#77779d">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="itemImgUpload" fitHeight="214.0" fitWidth="248.0" onDragDetected="#uploadImg" pickOnBounds="true" preserveRatio="true">
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </ImageView>
+                  <HBox prefHeight="30.0" prefWidth="278.0" spacing="5.0">
+                     <children>
+                        <Button fx:id="fileChooserBtn" mnemonicParsing="false" onAction="#onFileChooser" prefHeight="26.0" prefWidth="52.0" styleClass="btnStyle" stylesheets="@DashboardButtonCSS.css" text="פתח" />
+                        <TextField fx:id="filePathTF" editable="false" prefHeight="26.0" prefWidth="222.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="TOP_RIGHT" prefHeight="58.0" prefWidth="314.0" spacing="35.0">
+                     <children>
+                        <ChoiceBox fx:id="catalogChoiceBox" prefHeight="26.0" prefWidth="121.0" stylesheets="@ChoiceBoxStyle.css" />
+                        <Label alignment="CENTER" contentDisplay="RIGHT" text="חנות" textFill="#77779d" />
+                     </children>
+                  </HBox>
+                  <AnchorPane prefHeight="51.0" prefWidth="350.0">
+                     <children>
+                        <Button fx:id="saveBtn" alignment="CENTER" contentDisplay="TOP" layoutX="-32.0" layoutY="5.0" mnemonicParsing="false" onAction="#onClickSaveBtn" prefHeight="36.0" prefWidth="91.0" styleClass="btnStyle" stylesheets="@DashboardButtonCSS.css" text="שמור" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="353.0" prefWidth="372.0">
+               <children>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="46.0" prefWidth="255.0" spacing="10.0">
+                     <children>
+                        <TextField fx:id="itemNameTF" prefHeight="26.0" prefWidth="153.0" />
+                        <Label alignment="CENTER" contentDisplay="RIGHT" text="שם הפריט" textFill="#77779d" />
+                        <TextField fx:id="itemIDTF" alignment="CENTER" editable="false" prefHeight="26.0" prefWidth="87.0" promptText="-------" />
+                        <Label alignment="CENTER" contentDisplay="RIGHT" text="מק&quot;ט" textFill="#77779d" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="87.0" prefWidth="372.0" spacing="10.0">
+                     <children>
+                        <TextField fx:id="discountTF" prefHeight="26.0" prefWidth="84.0" />
+                        <Label alignment="CENTER" contentDisplay="RIGHT" text="הנחה" textFill="#77779d" />
+                        <TextField fx:id="priceTF" prefHeight="26.0" prefWidth="88.0" />
+                        <Label alignment="CENTER" contentDisplay="RIGHT" text="מחיר" textFill="#77779d" />
+                     </children>
+                  </HBox>
+                  <VBox alignment="CENTER_RIGHT" prefHeight="165.0" prefWidth="372.0" spacing="5.0">
+                     <children>
+                        <Label alignment="TOP_RIGHT" contentDisplay="RIGHT" prefHeight="18.0" prefWidth="54.0" text="תיאור" textAlignment="RIGHT" textFill="#77779d" />
+                        <TextArea fx:id="DescriptionTF" prefHeight="126.0" prefWidth="372.0" />
+                     </children>
+                  </VBox>
+                  <HBox alignment="TOP_RIGHT" prefHeight="57.0" prefWidth="382.0" spacing="10.0">
+                     <children>
+                        <ChoiceBox fx:id="itemColorChoiceBox" prefHeight="26.0" prefWidth="109.0" stylesheets="@ChoiceBoxStyle.css" />
+                        <Label alignment="CENTER" contentDisplay="RIGHT" prefHeight="18.0" prefWidth="74.0" text="צבע שולט" textFill="#77779d" />
+                        <ChoiceBox fx:id="itemTypeChoiceBox" prefHeight="26.0" prefWidth="97.0" stylesheets="@ChoiceBoxStyle.css" />
+                        <Label alignment="CENTER" contentDisplay="RIGHT" prefHeight="18.0" prefWidth="52.0" text="סוג פריט" textFill="#77779d" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <ImageView fitHeight="87.0" fitWidth="297.0" layoutX="445.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@My%20project%20(10).png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

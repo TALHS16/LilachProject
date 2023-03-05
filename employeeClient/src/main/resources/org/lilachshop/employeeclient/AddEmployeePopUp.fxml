@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="259.0" prefWidth="513.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.lilachshop.employeeclient.AddEmployeePopUpController">
+    <children>
+      <VBox alignment="CENTER" prefHeight="259.0" prefWidth="570.0">
+         <children>
+            <ImageView fitHeight="73.0" fitWidth="284.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@My%20project%20(43).png" />
+               </image>
+            </ImageView>
+              <HBox alignment="CENTER" prefHeight="104.0" prefWidth="511.0" spacing="50.0">
+                  <children>
+                      <VBox alignment="CENTER_RIGHT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="214.0" prefWidth="197.0">
+                          <children>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                                  <children>
+                                      <ChoiceBox fx:id="storeChoiceBox" prefHeight="26.0" prefWidth="154.0" stylesheets="@ChoiceBoxStyle.css" />
+                                      <Label alignment="CENTER" contentDisplay="RIGHT" text="חנות" textFill="#77779d" />
+                                  </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                                  <children>
+                                      <ChoiceBox fx:id="roleChoiceBox" prefHeight="25.0" prefWidth="144.0" stylesheets="@ChoiceBoxStyle.css">
+                                          <HBox.margin>
+                                              <Insets />
+                                          </HBox.margin>
+                                      </ChoiceBox>
+                                      <Label alignment="CENTER" contentDisplay="RIGHT" text="תפקיד" textFill="#77779d" />
+                                  </children>
+                              </HBox>
+                          </children>
+                      </VBox>
+                      <VBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="248.0" prefWidth="238.0">
+                          <children>
+                              <HBox alignment="CENTER" prefHeight="70.0" prefWidth="244.0" spacing="15.0">
+                                  <children>
+                                      <TextField fx:id="employeeUsernameTF" alignment="CENTER_RIGHT" prefHeight="26.0" prefWidth="176.0" />
+                                      <Label prefHeight="17.0" prefWidth="90.0" text="שם משתמש" textFill="#77779d" />
+                                  </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="70.0" prefWidth="244.0" spacing="10.0">
+                                  <children>
+                                      <TextField fx:id="employeePasswordTF" prefHeight="26.0" prefWidth="176.0" />
+                                      <Label prefHeight="17.0" prefWidth="90.0" text="סיסמא" textFill="#77779d" />
+                                  </children>
+                              </HBox>
+                          </children>
+                      </VBox>
+                  </children>
+              </HBox>
+            <Label fx:id="takenLabel" text="שם משתמש תפוס" textFill="#ae1717" />
+            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="200.0" spacing="50.0">
+               <children>
+                  <Button fx:id="resetBtn" mnemonicParsing="false" onAction="#onClickReset" prefHeight="25.0" prefWidth="50.0" styleClass="btnStyle" stylesheets="@DashboardButtonCSS.css" text="נקה" textFill="#77779d" />
+                  <Button fx:id="addBtn" mnemonicParsing="false" onAction="#onClickAdd" prefHeight="25.0" prefWidth="50.0" styleClass="btnStyle" stylesheets="@DashboardButtonCSS.css" text="הוסף" textFill="#77779d" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+    </children>
+</AnchorPane>

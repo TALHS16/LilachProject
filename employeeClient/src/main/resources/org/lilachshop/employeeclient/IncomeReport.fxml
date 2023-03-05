@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.lilachshop.employeeclient.IncomeReportController">
+   <children>
+      <VBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="581.0" prefWidth="582.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER_RIGHT">
+               <children>
+                  <Button fx:id="newScreenBtn" mnemonicParsing="false" onAction="#onNewScreenBtnClick" styleClass="btnStyle" stylesheets="@DashboardButtonCSS.css" text="פתיחת מסך נוסף להשוואה">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </HBox>
+            <BarChart fx:id="complaintBarChart" prefHeight="333.0" prefWidth="573.0" title="כמות הכנסה לפי ימים">
+               <xAxis>
+                  <CategoryAxis fx:id="days" label="תאריך" side="BOTTOM" />
+               </xAxis>
+               <yAxis>
+                  <NumberAxis fx:id="complaintNumber" label="כמות הכנסה בשקלים" side="LEFT" />
+               </yAxis>
+            </BarChart>
+            <HBox alignment="CENTER_RIGHT" prefHeight="58.0" prefWidth="600.0" spacing="10.0">
+               <children>
+                  <ComboBox fx:id="storeList" onAction="#onChangeStore" prefHeight="35.0" prefWidth="118.0" stylesheets="@ChoiceBoxStyle.css">
+                     <styleClass>
+                        <String fx:value="choice-box" />
+                        <String fx:value="context-menu" />
+                        <String fx:value="label" />
+                        <String fx:value="menu-item" />
+                     </styleClass>
+                  </ComboBox>
+                  <Label fx:id="chooseStoreLabel" prefWidth="56.0" text="בחר חנות:" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT">
+               <VBox.margin>
+                  <Insets left="20.0" />
+               </VBox.margin>
+               <children>
+                  <Label alignment="CENTER_RIGHT" text="בחר פרק זמן:" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" nodeOrientation="RIGHT_TO_LEFT" prefHeight="32.0" prefWidth="600.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label text="התחלה:" />
+                        <DatePicker fx:id="startDate" prefHeight="27.0" prefWidth="120.0" style="-fx-border-color: #E6E6FA;">
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                        </DatePicker>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="27.0" prefWidth="267.0">
+                     <children>
+                        <Label text="סיום:" />
+                        <DatePicker fx:id="endDate" prefHeight="27.0" prefWidth="120.0" style="-fx-border-color: #E6E6FA;" stylesheets="@ChoiceBoxStyle.css">
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                        </DatePicker>
+                     </children>
+                  </HBox>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="TOP_RIGHT" spacing="10.0">
+               <children>
+                  <Label fx:id="totalincomeINS" text="ש&quot;ח" visible="false" />
+                  <Label fx:id="totalIncome" prefHeight="17.0" prefWidth="102.0">
+                     <HBox.margin>
+                        <Insets left="5.0" right="15.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="totalChainIncomeLabel" alignment="CENTER_RIGHT" text="סך הכנסות הרשת לפרק זמן זה:" />
+               </children>
+               <VBox.margin>
+                  <Insets left="20.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="BOTTOM_LEFT">
+               <children>
+                  <Button fx:id="okBtn" alignment="CENTER" mnemonicParsing="false" onAction="#updateBarChart" prefHeight="25.0" prefWidth="68.0" styleClass="btnStyle" stylesheets="@DashboardButtonCSS.css" text="בחר" />
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </VBox>
+      <Label layoutX="332.0" layoutY="443.0" text="סיום:" />
+   </children>
+</AnchorPane>

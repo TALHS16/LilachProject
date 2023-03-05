@@ -1,0 +1,31 @@
+
+.choice-box .context-menu {
+    -fx-fill-width: 100% 100%;
+}
+
+.choice-box .menu-item:focused {
+    -fx-background-color: #77779D;
+
+}
+
+
+.choice-box .menu-item > .label {
+    -fx-text-fill: #77779D;
+    -fx-text-alignment: CENTER;
+   }
+.choice-box .menu-item:focused > .label {
+    -fx-text-fill: #E6E6FA;
+}
+
+.choice-box {
+    -fx-background-radius: 20px;
+    -fx-background-color: #E6E6FA;
+    -fx-border-radius: 20px;
+    -fx-border-color: #77779D;
+}
+
+.choice-box > .label {
+    -fx-text-fill: #77779D;
+    -fx-text-alignment: CENTER;
+}
+

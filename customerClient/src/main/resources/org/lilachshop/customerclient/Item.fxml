@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="240.0" prefWidth="190.0" style="-fx-background-radius: 20; -fx-border-color: #E6E6FA; -fx-border-radius: 20; -fx-background-color: #F5F5F5;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.lilachshop.customerclient.ItemController">
+    <children>
+        <VBox alignment="CENTER" layoutY="22.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="190.0" prefWidth="190.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+            <VBox alignment="CENTER" prefHeight="56.0" prefWidth="190.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="57.0" prefWidth="190.0">
+                     <children>
+                        <Pane prefHeight="27.0" prefWidth="10.0" />
+                        <Label fx:id="Price1" text=" ש&quot;ח" textFill="#77779d">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Label>
+                        <Text fx:id="Price" fill="#77779d" strokeType="OUTSIDE" strokeWidth="0.0" text="70" wrappingWidth="33.80621528625488">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Label fx:id="Name" prefHeight="27.0" prefWidth="56.0" text="נרקיס" textFill="#77779d">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="TOP_CENTER" prefHeight="30.0" prefWidth="180.0">
+                     <children>
+                        <Text fx:id="oldPrice1" fill="#77779d" strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text=" ש&quot;ח" visible="false">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="oldPrice" fill="#77779d" strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="70" visible="false" wrappingWidth="23.18334157200374">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Text>
+                        <ImageView fx:id="saleImage" fitHeight="24.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                           <image>
+                              <Image url="@../../../images/My%20project%20(11).png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+               </children>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="159.0" prefWidth="180.0">
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+               <children>
+                      <ImageView fx:id="Img" fitHeight="169.0" fitWidth="131.0" onMousePressed="#click" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                              <Image url="@../../../images/narkis_hatsostra.jpg" />
+                          </image>
+                      </ImageView>
+               </children>
+            </VBox>
+            </children>
+        </VBox>
+    </children>
+
+   <cursor>
+      <Cursor fx:constant="HAND" />
+   </cursor>
+   <effect>
+      <DropShadow blurType="GAUSSIAN" height="17.1" radius="14.7675" width="43.97">
+         <color>
+            <Color red="0.46666666865348816" green="0.46666666865348816" blue="0.615686297416687" />
+         </color>
+      </DropShadow>
+   </effect>
+</AnchorPane>

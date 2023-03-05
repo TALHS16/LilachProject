@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="180.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.lilachshop.customerclient.SaleItemController">
+   <children>
+      <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#click" prefHeight="100.0" prefWidth="180.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="82.0" prefWidth="101.0">
+               <children>
+                  <Text fx:id="flowerName" fill="#77779d" strokeType="OUTSIDE" strokeWidth="0.0" text="נרקיס חצוצרה" textAlignment="CENTER" wrappingWidth="77.22900390625">
+                     <font>
+                        <Font size="17.0" />
+                     </font></Text>
+                  <HBox alignment="TOP_CENTER" prefHeight="20.0" prefWidth="102.0">
+                     <children>
+                        <Text fx:id="price1" fill="#77779d" strokeType="OUTSIDE" strokeWidth="0.0" text="ש&quot;ח">
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="price" fill="#77779d" strokeType="OUTSIDE" strokeWidth="0.0" text="120">
+                           <font>
+                              <Font size="17.0" />
+                           </font></Text>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+            <ImageView fitHeight="68.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/My%20project%20(11).png" />
+               </image>
+               <HBox.margin>
+                  <Insets right="5.0" />
+               </HBox.margin>
+            </ImageView>
+         </children>
+      </HBox>
+   </children>
+   <cursor>
+      <Cursor fx:constant="HAND" />
+   </cursor>
+</AnchorPane>

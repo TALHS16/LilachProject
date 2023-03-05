@@ -1,0 +1,12 @@
+# Project exclude paths
+.idea
+/customerClient/target/
+/employeeClient/target/
+/entities/target/
+/server/target/
+*.jar
+*.class
+*.lst
+*.properties
+*.iml
+*dependency-reduced-pom.xml

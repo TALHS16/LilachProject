@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="765.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.lilachshop.employeeclient.OrderTableController">
+   <center>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="644.0" prefWidth="1000.0">
+          <children>
+              <TableView fx:id="orderTable" layoutX="26.0" layoutY="146.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="636.0" prefWidth="962.0" style="-fx-background-radius: 10;" stylesheets="@tableCSS.css" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="20.0">
+                  <columns>
+                      <TableColumn fx:id="orderIDcol" prefWidth="77.59991610050201" text="מס הזמנה" />
+                      <TableColumn fx:id="customerNameCol" prefWidth="73.60002899169922" text="שם לקוח" />
+                      <TableColumn fx:id="statusCol" prefWidth="75.0" text="סטטוס" />
+                      <TableColumn fx:id="creationDateCol" prefWidth="94.13336181640625" text="תאריך יצירה" />
+                      <TableColumn fx:id="totalPriceCol" prefWidth="90.933349609375" text="סכום עסקה" />
+                      <TableColumn fx:id="refundCol" prefWidth="88.26666259765625" text="החזר כספי" />
+                      <TableColumn prefWidth="462.9333190917969" text="אספקה">
+                          <columns>
+                              <TableColumn fx:id="DeliveryMethodCol" prefWidth="135.7333984375" text="אמצעי אספקה" />
+                              <TableColumn fx:id="deliveryTimeCol" prefWidth="143.73333740234375" text="זמן אספקה מבוקש" />
+                              <TableColumn fx:id="deliveryAddressCol" prefWidth="211.4666748046875" text="כתובת אספקה" />
+                          </columns>
+                      </TableColumn>
+                  </columns>
+              </TableView>
+          </children>
+      </AnchorPane>
+   </center>
+   <top>
+      <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="121.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+         <children>
+              <HBox alignment="BOTTOM_LEFT" prefHeight="121.0" prefWidth="300.0" spacing="30.0">
+                  <children>
+                      <VBox alignment="BOTTOM_RIGHT" prefHeight="121.0" prefWidth="100.0">
+                          <children>
+                              <Text fill="#77779d" strokeType="OUTSIDE" strokeWidth="0.0" text="חנות" textAlignment="RIGHT">
+                           <VBox.margin>
+                              <Insets bottom="5.0" right="5.0" />
+                           </VBox.margin>
+                              </Text>
+                              <ChoiceBox fx:id="StoreChoiceBox" nodeOrientation="RIGHT_TO_LEFT" prefHeight="26.0" prefWidth="109.0" stylesheets="@ChoiceBoxStyle.css" />
+                          </children>
+                      </VBox>
+                  </children>
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin>
+              </HBox>
+            <ImageView fitHeight="117.0" fitWidth="671.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@My%20project%20(5).png" />
+               </image>
+               <HBox.margin>
+                  <Insets top="20.0" />
+               </HBox.margin>
+            </ImageView>
+         </children>
+      </HBox>
+   </top>
+</BorderPane>

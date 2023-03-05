@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="765.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.lilachshop.employeeclient.CustomerServiceViewController">
+   <center>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="644.0" prefWidth="1000.0">
+         <children>
+            <Label layoutX="452.0" layoutY="36.0" text="טיפול בתלונות">
+               <font>
+                  <Font size="33.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tableView" layoutX="74.0" layoutY="109.0" prefHeight="581.0" prefWidth="961.0" style="-fx-border-radius: 12; -fx-background-radius: 12;" stylesheets="@tableCSS.css" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="20.0">
+              <columns>
+                <TableColumn fx:id="content" minWidth="15.0" prefWidth="500.0" style="-fx-alignment: CENTER;" text="תוכן" />
+                <TableColumn fx:id="status" prefWidth="138.0" style="-fx-alignment: CENTER;" text="סטטוס" />
+                  <TableColumn fx:id="creationDate" prefWidth="141.0" style="-fx-alignment: CENTER;" text="תאריך מענה סופי" />
+                  <TableColumn fx:id="complaintNumber" prefWidth="181.0" style="-fx-alignment: CENTER;" text="מספר תלונה" />
+              </columns>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </center>
+   <top>
+      <HBox alignment="BOTTOM_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="121.0" prefWidth="1000.0" BorderPane.alignment="BOTTOM_LEFT">
+         <children>
+            <ImageView fitHeight="117.0" fitWidth="671.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@My%20project%20(6).png" />
+               </image>
+            </ImageView>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+      </HBox>
+   </top>
+</BorderPane>

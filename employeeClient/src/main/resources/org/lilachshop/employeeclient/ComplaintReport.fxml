@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.lilachshop.employeeclient.ComplaintReportController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="580.0" prefWidth="580.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <children>
+            <HBox alignment="CENTER_RIGHT" stylesheets="@ChoiceBoxStyle.css">
+               <children>
+                  <Button fx:id="newScreenBtn" mnemonicParsing="false" onAction="#onNewScreenBtnClick" styleClass="btnStyle" stylesheets="@DashboardButtonCSS.css" text="פתיחת מסך נוסף להשוואה" />
+               </children>
+            </HBox>
+            <BarChart fx:id="complaintBarChart" prefHeight="333.0" prefWidth="573.0" title="מספר תלונות לפי ימים">
+              <xAxis>
+                <CategoryAxis fx:id="days" label="ימים" side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis fx:id="complantNumber" label="מספר תלונות" side="LEFT" />
+              </yAxis>
+            </BarChart>
+            <HBox alignment="CENTER_RIGHT" spacing="10.0">
+               <children>
+                  <ComboBox fx:id="storeList" onAction="#onChangeStore" prefHeight="35.0" prefWidth="118.0" stylesheets="@ChoiceBoxStyle.css">
+                     <styleClass>
+                        <String fx:value="choice-box" />
+                        <String fx:value="context-menu" />
+                        <String fx:value="label" />
+                        <String fx:value="menu-item" />
+                     </styleClass>
+                  </ComboBox>
+                  <Label fx:id="chooseStoreLabel" text="בחר חנות:" />
+               </children>
+            </HBox>
+            <HBox alignment="TOP_RIGHT">
+               <children>
+                  <Label text="בחר פרק זמן:" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="27.0" prefWidth="223.0">
+                     <children>
+                        <DatePicker fx:id="endDate" nodeOrientation="RIGHT_TO_LEFT" prefHeight="27.0" prefWidth="120.0" style="-fx-border-color: #E6E6FA;" />
+                        <Label text="סיום:">
+                           <HBox.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <DatePicker fx:id="startDate" nodeOrientation="RIGHT_TO_LEFT" prefHeight="27.0" prefWidth="120.0" style="-fx-border-color: #E6E6FA;">
+                           <HBox.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </HBox.margin>
+                        </DatePicker>
+                        <Label text="התחלה:" />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT">
+               <children>
+                  <Label fx:id="TotalSumOfComplaints" prefHeight="17.0" prefWidth="38.0">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="totalComplaintsLabel" text="סך כמות תלונות לפרק זמן זה: ">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox>
+               <children>
+                  <Button fx:id="okBtn" mnemonicParsing="false" onAction="#updateBarChart" prefHeight="25.0" prefWidth="68.0" styleClass="btnStyle" stylesheets="@DashboardButtonCSS.css" text="בחר" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

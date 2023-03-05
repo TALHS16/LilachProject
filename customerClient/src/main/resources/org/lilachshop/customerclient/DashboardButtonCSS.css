@@ -1,0 +1,17 @@
+.btnStyle:hover{
+    -fx-cursor:hand ;
+}
+
+
+.btnStyle{
+    -fx-background-radius:  20px;
+    -fx-background-color: #E6E6FA;
+    -fx-border-width: 0.5;
+    -fx-border-color: #77779D;
+    -fx-border-radius: 20;
+    textFill:#77779d;
+    -fx-fill-width: 80;
+    -fx-fill-height: 25;
+}
+
+

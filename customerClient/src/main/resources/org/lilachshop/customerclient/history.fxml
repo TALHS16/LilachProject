@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.lilachshop.customerclient.HistoryController">
+    <children>
+        <BorderPane layoutY="1.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <top>
+                <HBox alignment="CENTER" prefHeight="50.0" prefWidth="186.0" style="-fx-background-color: E6E6FA;" BorderPane.alignment="CENTER_RIGHT">
+                    <children>
+                        <ImageView fitHeight="197.0" fitWidth="193.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../images/My%20project%20(43).png" />
+                            </image>
+                            <HBox.margin>
+                                <Insets left="10.0" top="10.0" />
+                            </HBox.margin>
+                        </ImageView>
+                        <VBox>
+                            <HBox.margin>
+                                <Insets right="10.0" top="20.0" />
+                            </HBox.margin>
+                            <children>
+                                <HBox alignment="TOP_RIGHT" prefHeight="66.0" prefWidth="1051.0">
+                                    <children>
+                                        <Label onMouseClicked="#returnToCatalog" prefHeight="30.0" prefWidth="51.0" text="לקטלוג" textFill="#77779d">
+                                            <font>
+                                                <Font size="16.0" />
+                                            </font>
+                                            <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                            </cursor>
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin>
+                                        </Label>
+                                        <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#returnToCatalog" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../../../images/My%20project%20(14).png" />
+                                            </image>
+                                            <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                            </cursor>
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                                        </ImageView>
+                                        <Label fx:id="name" alignment="CENTER_RIGHT" text="שלום, יוסי לוי" textFill="#77779d">
+                                            <font>
+                                                <Font size="16.0" />
+                                            </font>
+                                            <HBox.margin>
+                                                <Insets right="5.0" top="10.0" />
+                                            </HBox.margin>
+                                            <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                            </cursor>
+                                        </Label>
+                                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../../../images/My%20project%20(9).png" />
+                                            </image>
+                                            <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                            </cursor>
+                                        </ImageView>
+                                    </children>
+                                </HBox>
+                        <HBox alignment="BOTTOM_CENTER" prefHeight="135.0" prefWidth="1051.0">
+                           <children>
+                              <ImageView fitHeight="117.0" fitWidth="442.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../images/My%20project%20(24).png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+            </top>
+            <center>
+
+            </center>
+            <bottom>
+
+            </bottom>
+         <center>
+            <ScrollPane prefHeight="574.0" prefWidth="1209.0" BorderPane.alignment="CENTER">
+              <content>
+                <AnchorPane prefHeight="572.0" prefWidth="1222.0">
+                     <children>
+                        <VBox fx:id="itemLayout" prefHeight="200.0" prefWidth="1221.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+               <BorderPane.margin>
+                  <Insets bottom="25.0" left="25.0" right="30.0" top="20.0" />
+               </BorderPane.margin>
+            </ScrollPane>
+         </center>
+        </BorderPane>
+    </children>
+</AnchorPane>

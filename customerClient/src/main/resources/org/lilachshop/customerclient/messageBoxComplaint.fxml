@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="436.0" prefWidth="712.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.lilachshop.customerclient.MessageBoxComplaintController">
+    <children>
+        <VBox alignment="CENTER_RIGHT" layoutX="50.0" prefHeight="426.0" prefWidth="584.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="20.0">
+            <children>
+            <HBox alignment="CENTER" prefHeight="46.0" prefWidth="548.0">
+               <children>
+                  <ImageView fitHeight="101.0" fitWidth="258.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/My%20project%20(27).png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="75.0" prefWidth="612.0">
+               <children>
+                  <Text fx:id="complaintIDTF" boundsType="LOGICAL_VERTICAL_CENTER" fill="#77779d" strokeType="OUTSIDE" strokeWidth="0.0" text=" #00000" textAlignment="RIGHT" textOrigin="CENTER" wrappingWidth="94.49432611465454">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Text>
+                  <Text fill="#77779d" strokeType="OUTSIDE" strokeWidth="0.0" text="תלונה מ&quot;ס:" wrappingWidth="98.755859375">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+                <Label prefHeight="30.0" prefWidth="70.0" text="תוכן תלונה:" textAlignment="RIGHT" textFill="#77779d" underline="true">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets bottom="10.0" />
+                    </VBox.margin>
+                </Label>
+                <TextField fx:id="complainDescriptionTF" alignment="TOP_RIGHT" editable="false" prefHeight="118.0" prefWidth="498.0">
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                </TextField>
+            <Text fx:id="noReplyYet" boundsType="LOGICAL_VERTICAL_CENTER" fill="#77779d" strokeType="OUTSIDE" strokeWidth="0.0" text="אנו מטפלים בתלונתך. כאשר נסיים לטפל בה, המענה יהיה תחת לשונית 'תגובת המערכת:'" textAlignment="RIGHT" textOrigin="CENTER" wrappingWidth="498.8943476676941">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+                <Label prefHeight="30.0" prefWidth="100.0" text="תגובת המערכת:" textFill="#77779d" underline="true">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets bottom="10.0" top="20.0" />
+                    </VBox.margin>
+                </Label>
+                <TextField fx:id="complainAnswerTF" alignment="TOP_RIGHT" editable="false" prefHeight="118.0" prefWidth="498.0">
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                </TextField>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
