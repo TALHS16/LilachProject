@@ -35,4 +35,15 @@ https://user-images.githubusercontent.com/100534541/224368726-dc77d1fe-7efd-44c9
 
 https://user-images.githubusercontent.com/100534541/224368959-7be92abd-0bbb-4dfb-a2ae-3aa2b4d7cf0c.mp4
 
+### Store Manager
+
+https://user-images.githubusercontent.com/100534541/224372701-32463e5c-adfa-4f21-b6b3-5a82556cd763.mp4
+
+### Chain Manager
+
+https://user-images.githubusercontent.com/100534541/224374958-f903a66a-5ec4-40ed-936f-a5f4dc5cfdcf.mp4
+
+### Customer Service Employee
+
+https://user-images.githubusercontent.com/100534541/224373963-744e3854-4b8f-4803-a823-dafe81777e2e.mp4
 
